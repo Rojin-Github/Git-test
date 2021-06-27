@@ -1,0 +1,122 @@
+Git - open source distributed vcs designed for speed and efficiency.
+Repo - A Git repository is the . git/ folder inside a project. This repository tracks all changes made to files in your project, building a history over time.
+Git hub - It is git repo hosting service, it is a web interface
+Git lab - open source github that enteprise can run on their own servers. (purchase)
+Version control - a s/m that records of your changes.
+
+Commit - Snapshots are commits and it contain one or more file changes
+
+Git repo will be having one branch and that branch is known as master
+
+Git installation -- (docs) ..
+
+COMMANDS:
+Create a new repo -  git init demo
+Adding files to repo  - git add
+Saving changes in your repo  - git commit
+Adding the url to the repo where all code will be sent -    git add origin
+To list the commit done in repo  -  git log --online
+To check files in git  -  git ls-files
+To add modify files to staging area and then proceed to commit  - git commit -am
+git Alias
+To rename file - git mv (old file name) (new file name)
+Excluding unwanted fie -  .gitignore  ( ls wont show , ls -a will show)
+Difference btwn two commit  - git diff (commit1) (commit2)
+Create a new branch  - git checkout -b (branch name)
+create branch from local to remote -  git remote add (branchname) url
+Switch to other branch  - git checkout (switch branch name)
+To delete remote branch  - git push origin - delete branch name
+Create git tag -  git tag (tagname)      /  To view tag list   -    git tag -- list
+to add another repo to local repo  - git remote
+
+
+                                                                       temp direct whr file will be untrack to track state
+Three local state of Git -   Working directory(copy of ur project) --- Staging Area(about to commit in repo) --- Repo(object database) 
+Branch  - Movable pointer to commits . Pointer to snapshot of ur changes.
+Types of Merge - Fast forward,Manual, Automatic
+Git Tags  -  Tags are ref's that point to specific points in Git repo history . Git supports two types of tags: lightweight and annotated.
+Annotated  -  git tag -a v1.4 -m "my version 1.4"         Lightweight -   git tag v1.4-lw
+Git Stash - image 
+git Reset - Reset current HEAD to the specified state     soft , medium , hard
+Git Reflog - manage the information recorded in it
+
+
+
+GIT HUB:
+
+Account profile overview
+
+Linking to Github repo  -  git remote add origin (url)
+                           git remote -v
+						 
+Sync local and remote GIT repo  -   git push - u origin master --tags
+
+SSH key Auth and verifying with GITHUB  -     ssh -T git@github.com 
+.git file will be there in empty repo 
+git checkout --file    to discard changes in the working directory (will back out any changes made to the specified file and replace it with the version last committed in Git)
+
+
+GIT HUB REPO :
+
+Creating repo in GITHUB
+
+COMMANDS:
+Creating local copy with clone -   git clone (url)
+git fetch - If you have cloud repo and if u want to pull/push locally then we do fetch. (similar to clone, but in clone you are not linking to local or remote.But in fetch you already linked both and you are fetching only code)
+git pull - It pulls the code from remote repo and creates local copy for you and you can able to view the code (fetch + merge)
+git push -u origin master - pushing code from local to remote server.         origin is remote repo name , master is local branch name
+Updating repo from ref to origin -  git remote set-url origin (url)
+To see commit details  - git show (commit id)
+
+GITHUB REPO BRANCHES:
+
+Create branch in local and push to github  -   git push - u origin (branchname)
+List the branch  - git branch -a     To delete the branch  -  git branch -d (branchname)
+To delete the branch in github remotely -  git push origin :(branchname)
+Pull with rebase -   git pull --rebase
+GIT Graph -     git log --oneline --graph
+
+Pull requests -  let you tell others about changes you've pushed to a GitHub repository
+
+
+GITHUB TAGS:
+git tag - what git is thinking in background and what each commit is reffering to.  (Human readable info)
+types of tags: lightweight  - git tag (tagname) (bracnchname) and annotate  - git tag -a v0.1-alpha -m "Release 0.1 (Alpha)" (commitid)
+Pushing tag to github  -  git push origin (tagname)       git push --tags      (rest all of the tags)
+
+
+
+
+
+Steps to push code from local to remote repo github
+
+1) Create repo in github 
+2) Set your local project as current working directory 
+    pwd - it says present local directory 
+	change to folder whr project is located 
+	 cd / path 
+	 give ls  - list the files which is inside the folder
+3)  Initialize the local direct as git repo 
+     git init   - initialise the empty git repo 
+4)  Add files in your local repo 
+     git add .    - staging my files for first commit.
+     git status   - we can see all files which is in stage to commit 
+5)  Commit the files in your local repo 
+    git commit -m "First commit"
+6)  Copy the remote repo url
+7)  Add the url for remote repo where your local repo will be pushed
+      git remote add origin url 
+8)  Push the code in your local repo to Github
+     git push -u origin master 
+      it will ask username and password and then finally code will be push to github repo 	 
+
+https://github.com/Rojin-Github/Git-docs.git
+					
+ssh-keygen -t rsa -b 4096 -C "rojinthomas04gmail.com"
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+
+clip < ~/.ssh/id_rsa.pub
+
+
+test case
